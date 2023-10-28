@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Space Grotesk', sans-serif;
+}
+ 
+
+.front-card {
+background: url("./assets/images/bg-card-front.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+position: absolute;
+top: 180px;
+border-radius: 10px;
+width: 320px;
+height: 230px;
+z-index: 20;
+
+}
+.back-card {
+    background: url("./assets/images/bg-card-back.png") no-repeat center/cover;
+/* background-size: cover;
+background-position: center;
+background-repeat: no-repeat; */
+position: absolute;
+right: 20px;
+border-radius: 10px;
+width: 320px;
+height: 230px;
+}
+
+form, .thank-you {
+    margin-top: 350px;
+}
+
+form label {
+    @apply tracking-wider text-sm block text-slate-800 mb-2 uppercase
+}
+form input {
+    @apply border-2 border-slate-300 py-3 px-4 outline-none w-full
+}
+.btn {
+    background-color: hsl(278, 68%, 11%);
+    @apply py-3 px-3 rounded shadow text-white text-base tracking-wider lg:text-lg
+}
+
+@media (min-width: 768px) {
+    .front-card, .back-card{
+        height: 300px;
+        width: 500px;
+        border-radius: 20px;
+    }
+    form, .thank-you  {
+        margin-top: 500px;
+    }
+
+
+}
+
+@media (min-width: 1024px) {
+    .front-card, .back-card{ 
+        position: relative;
+    }
+
+
+    .front-card{
+        top: 150px;
+}
+.back-card {
+    right: 0;
+}
+
+form, .thank-you  {
+margin-top: 0;
+}
+ 
+}
+
